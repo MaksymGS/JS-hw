@@ -277,7 +277,7 @@
 //   // Change code below this line
 //   const keys = Object.keys(apartment);
 //   const values = Object.values(apartment);
-  
+
 //   console.log(keys);
 //   console.log(values);
 
@@ -303,7 +303,7 @@
 //     { hex: "#4caf50", rgb: "76,175,80" },
 //     { hex: "#ffeb3b", rgb: "255,235,59" },
 //   ];
-  
+
 //   const hexColors = [];
 //   const rgbColors = [];
 //   // Change code below this line
@@ -321,7 +321,7 @@
 //     { name: "Droid", price: 400, quantity: 7 },
 //     { name: "Grip", price: 1200, quantity: 9 },
 //   ];
-  
+
 //   function getProductPrice(productName) {
 //     // Change code below this line
 //   for (const product of products) {
@@ -330,41 +330,89 @@
 //     }
 //   }
 //   return null;
-  
+
 //     // Change code above this line
 //   }
-// console.log(getProductPrice("Radar"));  
-// console.log(getProductPrice("Grip"));  
-// console.log(getProductPrice("Scanner"));  
-// console.log(getProductPrice("Droid"));  
-// console.log(getProductPrice("Engine"));  
+// console.log(getProductPrice("Radar"));
+// console.log(getProductPrice("Grip"));
+// console.log(getProductPrice("Scanner"));
+// console.log(getProductPrice("Droid"));
+// console.log(getProductPrice("Engine"));
 
+/***** 19 ****/
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
 
-const products = [
-    { name: "Radar", price: 1300, quantity: 4 },
-    { name: "Scanner", price: 2700, quantity: 3 },
-    { name: "Droid", price: 400, quantity: 7 },
-    { name: "Grip", price: 1200, quantity: 9 },
-  ];
-  
-  function getAllPropValues(propName) {
-    // Change code below this line
-  const allPropValues = [];
-    for (const product of products) {
-      if (propName === "name") {
-       allPropValues.push(product.name)
-       return allPropValues;
-            }
-      if (propName === "quantity") {
-       allPropValues.push(product.quantity)
-       return allPropValues;
-            }
-    }
-  
-  
-    // Change code above this line
-  }
-  console.log(getAllPropValues("name"));
-  console.log(getAllPropValues("quantity"));
-  console.log(getAllPropValues("price"));
-  console.log(getAllPropValues("category"));
+// function getAllPropValues(propName) {
+//   // Change code below this line
+//   const allPropValues = [];
+//   for (const product of products) {
+//     if (Object.keys(product).includes(propName)) {
+//       allPropValues.push(product[propName]);
+//     }
+//   }
+//   return allPropValues;
+// }
+// // Change code above this line
+
+// console.log(getAllPropValues('name'));
+// console.log(getAllPropValues('quantity'));
+// console.log(getAllPropValues('price'));
+// console.log(getAllPropValues('category'));
+
+/***** 20 ****/
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
+
+// function calculateTotalPrice(productName) {
+//   // Change code below this line
+//   let totalPrice = 0;
+//   for (const product of products) {
+//     if (productName === product.name) {
+//       totalPrice = product.price * product.quantity;
+//     }
+//   }
+//   return totalPrice;
+//   // Change code above this line
+// }
+
+// console.log(calculateTotalPrice('Blaster'));
+// console.log(calculateTotalPrice('Radar'));
+// console.log(calculateTotalPrice('Droid'));
+// console.log(calculateTotalPrice('Grip'));
+// console.log(calculateTotalPrice('Scanner'));
+
+/***** 21 ****/
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+// // Change code below this line
+// const { yesterday, today, tomorrow } = highTemperatures;
+// // const yesterday = highTemperatures.yesterday;
+// // const today = highTemperatures.today;
+// // const tomorrow = highTemperatures.tomorrow;
+
+// // Change code above this line
+// const meanTemperature = (yesterday + today + tomorrow) / 3;
+
+// console.log(yesterday);
+// console.log(today);
+// console.log(tomorrow);
+// console.log(meanTemperature);
+
+const lastWeekTemps = [14, 25, 11];
+const currentWeekTemps = [23, 17, 18];
+const allTemps = [...lastWeekTemps, ...currentWeekTemps];
+const otherTemps = Math.max(...allTemps);
+console.log(allTemps); // [14, 25, 11, 23, 17, 18]
+console.log(otherTemps);
